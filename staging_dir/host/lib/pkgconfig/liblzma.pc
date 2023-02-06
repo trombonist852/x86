@@ -5,10 +5,10 @@
 # You can do whatever you want with this file.
 #
 
-prefix=/home/wangjun/21/staging_dir/host
-exec_prefix=/home/wangjun/21/staging_dir/host
-libdir=/home/wangjun/21/staging_dir/host/lib
-includedir=/home/wangjun/21/staging_dir/host/include
+prefix=/home/trb/sdk/imm/staging_dir/host
+exec_prefix=/home/trb/sdk/imm/staging_dir/host
+libdir=/home/trb/sdk/imm/staging_dir/host/lib
+includedir=/home/trb/sdk/imm/staging_dir/host/include
 
 Name: liblzma
 Description: General purpose data compression library

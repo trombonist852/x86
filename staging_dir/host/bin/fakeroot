@@ -36,12 +36,12 @@ if [ -n "$STAGING_DIR_HOST" ]; then
     FAKED=${STAGING_DIR_HOST}/bin/faked
     PATHS=
 else
-    FAKEROOT_PREFIX=/home/wangjun/21/staging_dir/host
-    FAKEROOT_BINDIR=/home/wangjun/21/staging_dir/host/bin
+    FAKEROOT_PREFIX=/home/trb/sdk/imm/staging_dir/host
+    FAKEROOT_BINDIR=/home/trb/sdk/imm/staging_dir/host/bin
 
     USEABSLIBPATH=0
     FAKEROOT_LIB=libfakeroot.so
-    PATHS=/home/wangjun/21/staging_dir/host/lib:${FAKEROOT_PREFIX}/lib64/libfakeroot:${FAKEROOT_PREFIX}/lib32/libfakeroot
+    PATHS=/home/trb/sdk/imm/staging_dir/host/lib:${FAKEROOT_PREFIX}/lib64/libfakeroot:${FAKEROOT_PREFIX}/lib32/libfakeroot
     FAKED=${FAKEROOT_BINDIR}/faked
 fi
 

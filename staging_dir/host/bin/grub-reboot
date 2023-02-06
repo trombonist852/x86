@@ -17,14 +17,14 @@
 # along with GRUB.  If not, see <http://www.gnu.org/licenses/>.
 
 # Initialize some variables.
-prefix=/home/wangjun/21/staging_dir/host
-exec_prefix=/home/wangjun/21/staging_dir/host
+prefix=/home/trb/sdk/imm/staging_dir/host
+exec_prefix=/home/trb/sdk/imm/staging_dir/host
 bindir=${exec_prefix}/bin
-sbindir=/home/wangjun/21/staging_dir/host/bin
-sysconfdir="/home/wangjun/21/staging_dir/host/etc"
+sbindir=/home/trb/sdk/imm/staging_dir/host/bin
+sysconfdir="/home/trb/sdk/imm/staging_dir/host/etc"
 PACKAGE_NAME=GRUB
 PACKAGE_VERSION=2.04
-datarootdir="/home/wangjun/21/staging_dir/host/share"
+datarootdir="/home/trb/sdk/imm/staging_dir/host/share"
 datadir="${datarootdir}"
 if [ "x$pkgdatadir" = x ]; then
     pkgdatadir="${datadir}/grub"

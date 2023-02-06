@@ -5,7 +5,7 @@
 ;;; This file should be parsed by the same gengtype which wrote it.
 
 (!version  "8.4.0")
-(!srcdir  "/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc")
+(!srcdir  "/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc")
 (!languages 10 ada brig c cp fortran go jit lto objc objcp)
 (!fileslist 210
  (!srcfile 1023  "../libcpp/include/line-map.h")
@@ -468,11 +468,11 @@
                    (!srcfileloc  "tree-core.h" 922)
                    nil )
                   (!pair  "u"
-                   (!type union 25 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:924"
+                   (!type union 25 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:924"
                     (!srcfileloc  "tree-core.h" 1008)
                     (!fields 8 
                      (!pair  "bits"
-                      (!type struct 26 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:927"
+                      (!type struct 26 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:927"
                        (!srcfileloc  "tree-core.h" 950)
                        (!fields 16 
                         (!pair  "lang_flag_0"
@@ -544,7 +544,7 @@
                       (!srcfileloc  "tree-core.h" 950)
                       nil )
                      (!pair  "int_length"
-                      (!type struct 27 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:957"
+                      (!type struct 27 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:957"
                        (!srcfileloc  "tree-core.h" 971)
                        (!fields 3 
                         (!pair  "unextended"
@@ -568,7 +568,7 @@
                       (!srcfileloc  "tree-core.h" 974)
                       nil )
                      (!pair  "vector_cst"
-                      (!type struct 28 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:977"
+                      (!type struct 28 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:977"
                        (!srcfileloc  "tree-core.h" 986)
                        (!fields 3 
                         (!pair  "log2_npatterns"
@@ -600,7 +600,7 @@
                       (!srcfileloc  "tree-core.h" 995)
                       nil )
                      (!pair  "dependence_info"
-                      (!type struct 29 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:1004"
+                      (!type struct 29 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:1004"
                        (!srcfileloc  "tree-core.h" 1007)
                        (!fields 2 
                         (!pair  "clique"
@@ -2387,7 +2387,7 @@
                        (!srcfileloc  "rtl.h" 398)
                        nil )
                       (!pair  "u2"
-                       (!type union 137 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/rtl.h:400"
+                       (!type union 137 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/rtl.h:400"
                         (!srcfileloc  "rtl.h" 434)
                         (!fields 6 
                          (!pair  "original_regno"
@@ -2411,7 +2411,7 @@
                           (!srcfileloc  "rtl.h" 420)
                           nil )
                          (!pair  "const_vector"
-                          (!type struct 138 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/rtl.h:424"
+                          (!type struct 138 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/rtl.h:424"
                            (!srcfileloc  "rtl.h" 433)
                            (!fields 3 
                             (!pair  "npatterns"
@@ -6591,7 +6591,7 @@
                                     )
                                    )
                                    (!pair  "x"
-                                    (!type struct 328 nil  gc_used "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/basic-block.h:136"
+                                    (!type struct 328 nil  gc_used "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/basic-block.h:136"
                                      (!srcfileloc  "basic-block.h" 139)
                                      (!fields 2 
                                       (!pair  "head_"
@@ -9123,7 +9123,7 @@
                                    (!srcfileloc  "dwarf2out.h" 60)
                                    nil )
                                   (!pair  "dw_cfi_oprnd1"
-                                   (!type union 462 nil  gc_used "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/dwarf2out.h:50"
+                                   (!type union 462 nil  gc_used "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/dwarf2out.h:50"
                                     (!srcfileloc  "dwarf2out.h" 57)
                                     (!fields 5 
                                      (!pair  "dw_cfi_reg_num"
@@ -9747,7 +9747,7 @@
                                                    (!srcfileloc  "dwarf2out.h" 186)
                                                    nil )
                                                   (!pair  "v"
-                                                   (!type union 495 nil  gc_used "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/dwarf2out.h:188"
+                                                   (!type union 495 nil  gc_used "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/dwarf2out.h:188"
                                                     (!srcfileloc  "dwarf2out.h" 191)
                                                     (!fields 2 
                                                      (!pair  "sval"
@@ -11182,7 +11182,7 @@
                       )
                      )
                      (!pair  "loc"
-                      (!type union 545 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:1431"
+                      (!type union 545 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-core.h:1431"
                        (!srcfileloc  "tree-core.h" 1431)
                        (!fields 2 
                         (!pair  "stmt"
@@ -13080,7 +13080,7 @@
                             (!srcfileloc  "c/c-decl.c" 202)
                             (!fields 11 
                              (!pair  "u"
-                              (!type union 620 nil  gc_used "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/c/c-decl.c:188"
+                              (!type union 620 nil  gc_used "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/c/c-decl.c:188"
                                (!srcfileloc  "c/c-decl.c" 191)
                                (!fields 2 
                                 (!pair  "type"
@@ -14361,7 +14361,7 @@
   )
   nil 1023 nil nil )
  
- (!type struct 674 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/../libcpp/include/line-map.h:1276"nil 
+ (!type struct 674 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/../libcpp/include/line-map.h:1276"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -14439,11 +14439,11 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 689 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/../libcpp/include/cpplib.h:1131"nil 
+ (!type struct 689 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/../libcpp/include/cpplib.h:1131"nil 
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 690 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/../libcpp/include/cpplib.h:1142"nil 
+ (!type struct 690 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/../libcpp/include/cpplib.h:1142"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -14893,7 +14893,7 @@
     (!srcfileloc  "gimple.h" 360)
     nil )
    (!pair  "u"
-    (!type union 742 nil  gc_used "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/gimple.h:363"
+    (!type union 742 nil  gc_used "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/gimple.h:363"
      (!srcfileloc  "gimple.h" 366)
      (!fields 2 
       (!pair  "fntype"
@@ -21376,7 +21376,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type union 1311 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/mcf.c:343"nil 
+ (!type union 1311 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/mcf.c:343"nil 
   (!fields 0 )
   nil 0 nil )
  
@@ -21787,7 +21787,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type union 1370 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-eh.c:53"nil 
+ (!type union 1370 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/tree-eh.c:53"nil 
   (!fields 0 )
   nil 0 nil )
  
@@ -22270,19 +22270,19 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1467 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/config/i386/i386.c:33855"nil 
+ (!type struct 1467 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/config/i386/i386.c:33855"nil 
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1468 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/config/i386/i386.c:34534"nil 
+ (!type struct 1468 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/config/i386/i386.c:34534"nil 
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1469 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/config/i386/i386.c:35667"nil 
+ (!type struct 1469 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/config/i386/i386.c:35667"nil 
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1470 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/config/i386/i386.c:35893"nil 
+ (!type struct 1470 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/config/i386/i386.c:35893"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -23188,7 +23188,7 @@
   )
  )
  
- (!type struct 1623 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/ada/gcc-interface/decl.c:249"nil 
+ (!type struct 1623 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/ada/gcc-interface/decl.c:249"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -23969,7 +23969,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1710 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/c/c-parser.c:6886"nil 
+ (!type struct 1710 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/c/c-parser.c:6886"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -25866,7 +25866,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1889 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/fortran/trans.h:33"nil 
+ (!type struct 1889 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/fortran/trans.h:33"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -25890,11 +25890,11 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1895 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/fortran/trans.h:390"nil 
+ (!type struct 1895 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/fortran/trans.h:390"nil 
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1896 nil  gc_unused "anonymous:/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/fortran/trans.h:402"nil 
+ (!type struct 1896 nil  gc_unused "anonymous:/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/fortran/trans.h:402"nil 
   (!fields 0 )
   nil 0 nil nil )
  

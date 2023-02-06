@@ -1,5 +1,5 @@
 /* Generated automatically by the program 'build/genpreds'
-   from the machine description file '/home/wangjun/21/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/config/i386/i386.md'.  */
+   from the machine description file '/home/trb/sdk/imm/build_dir/toolchain-x86_64_gcc-8.4.0_musl/gcc-8.4.0/gcc/config/i386/i386.md'.  */
 
 #ifndef GCC_TM_PREDS_H
 #define GCC_TM_PREDS_H

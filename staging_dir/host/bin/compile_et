@@ -3,7 +3,7 @@
 #
 
 AWK=gawk
-DIR=/home/wangjun/21/staging_dir/host/share/et
+DIR=/home/trb/sdk/imm/staging_dir/host/share/et
 
 if test "$1" = "--build-tree" ; then
     shift;

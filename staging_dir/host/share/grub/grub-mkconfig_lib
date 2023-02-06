@@ -14,12 +14,12 @@
 # You should have received a copy of the GNU General Public License
 # along with GRUB.  If not, see <http://www.gnu.org/licenses/>.
 
-prefix="/home/wangjun/21/staging_dir/host"
-exec_prefix="/home/wangjun/21/staging_dir/host"
-datarootdir="/home/wangjun/21/staging_dir/host/share"
+prefix="/home/trb/sdk/imm/staging_dir/host"
+exec_prefix="/home/trb/sdk/imm/staging_dir/host"
+datarootdir="/home/trb/sdk/imm/staging_dir/host/share"
 datadir="${datarootdir}"
 bindir="${exec_prefix}/bin"
-sbindir="/home/wangjun/21/staging_dir/host/bin"
+sbindir="/home/trb/sdk/imm/staging_dir/host/bin"
 if [ "x$pkgdatadir" = x ]; then
     pkgdatadir="${datadir}/grub"
 fi

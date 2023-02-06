@@ -114,6 +114,10 @@ config DEFAULT_iptables
 	bool
 	default y
 
+config DEFAULT_ipv6helper
+	bool
+	default y
+
 config DEFAULT_kmod-8139cp
 	bool
 	default y
@@ -154,15 +158,15 @@ config DEFAULT_kmod-i40e
 	bool
 	default y
 
-config DEFAULT_kmod-i40evf
-	bool
-	default y
-
 config DEFAULT_kmod-igb
 	bool
 	default y
 
 config DEFAULT_kmod-igbvf
+	bool
+	default y
+
+config DEFAULT_kmod-igc
 	bool
 	default y
 
@@ -186,11 +190,15 @@ config DEFAULT_kmod-pcnet32
 	bool
 	default y
 
+config DEFAULT_kmod-r8101
+	bool
+	default y
+
 config DEFAULT_kmod-r8125
 	bool
 	default y
 
-config DEFAULT_kmod-r8169
+config DEFAULT_kmod-r8168
 	bool
 	default y
 
@@ -222,6 +230,10 @@ config DEFAULT_kmod-sound-via82xx
 	bool
 	default y
 
+config DEFAULT_kmod-tg3
+	bool
+	default y
+
 config DEFAULT_kmod-tulip
 	bool
 	default y
@@ -250,7 +262,7 @@ config DEFAULT_kmod-usb-net-rtl8150
 	bool
 	default y
 
-config DEFAULT_kmod-usb-net-rtl8152
+config DEFAULT_kmod-usb-net-rtl8152-vendor
 	bool
 	default y
 
@@ -275,10 +287,6 @@ config DEFAULT_logd
 	default y
 
 config DEFAULT_luci
-	bool
-	default y
-
-config DEFAULT_luci-app-cpufreq
 	bool
 	default y
 
@@ -502,11 +510,19 @@ config ISO_IMAGES
 	bool
 	default n
 
+config QCOW2_IMAGES
+	bool
+	default n
+
 config VDI_IMAGES
 	bool
 	default n
 
 config VMDK_IMAGES
+	bool
+	default n
+
+config VHDX_IMAGES
 	bool
 	default n
 
@@ -516,11 +532,11 @@ config TARGET_IMAGES_GZIP
 
 config TARGET_KERNEL_PARTSIZE
 	int
-	default 128
+	default 16
 
 config TARGET_ROOTFS_PARTSIZE
 	int
-	default 1500
+	default 2000
 
 config TARGET_ROOTFS_PARTNAME
 	string
@@ -551,6 +567,10 @@ config BUILDBOT
 	default n
 
 config SIGNATURE_CHECK
+	bool
+	default y
+
+config DOWNLOAD_CHECK_CERTIFICATE
 	bool
 	default y
 
@@ -1274,6 +1294,10 @@ config CCACHE_DIR
 	string
 	default ""
 
+config KERNEL_CFLAGS
+	string
+	default ""
+
 config EXTERNAL_KERNEL_TREE
 	string
 	default ""
@@ -1447,6 +1471,30 @@ config FEED_routing
 	default y
 
 config FEED_telephony
+	bool
+	default y
+
+config FEED_passwall
+	bool
+	default y
+
+config FEED_passwall1
+	bool
+	default y
+
+config FEED_passwall2
+	bool
+	default y
+
+config FEED_danshui
+	bool
+	default y
+
+config FEED_nas
+	bool
+	default y
+
+config FEED_nas_luci
 	bool
 	default y
 
@@ -5786,6 +5834,10 @@ config PACKAGE_jsonfilter
 	bool
 	default y
 
+config PACKAGE_libatomic
+	bool
+	default y
+
 config PACKAGE_libc
 	bool
 	default y
@@ -5799,6 +5851,10 @@ config PACKAGE_libpthread
 	default y
 
 config PACKAGE_librt
+	bool
+	default y
+
+config PACKAGE_libstdcpp
 	bool
 	default y
 
@@ -5833,6 +5889,10 @@ config PROCD_SHOW_BOOT
 config PROCD_ZRAM_TMPFS
 	bool
 	default n
+
+config PACKAGE_resolveip
+	bool
+	default y
 
 config PACKAGE_rpcd
 	bool
@@ -5874,18 +5934,6 @@ config PACKAGE_usign
 	bool
 	default y
 
-config ZABBIX_OPENSSL
-	bool
-	default n
-
-config ZABBIX_GNUTLS
-	bool
-	default n
-
-config ZABBIX_NOSSL
-	bool
-	default y
-
 config ZABBIX_MYSQL
 	bool
 	default n
@@ -5893,14 +5941,6 @@ config ZABBIX_MYSQL
 config ZABBIX_POSTGRESQL
 	bool
 	default y
-
-config GOTOP_COMPRESS_GOPROXY
-	bool
-	default n
-
-config GOTOP_COMPRESS_UPX
-	bool
-	default n
 
 config SCHROOT_BTRFS
 	bool
@@ -5934,15 +5974,15 @@ config PACKAGE_automount
 	bool
 	default y
 
+config PACKAGE_ipv6helper
+	bool
+	default y
+
 config PACKAGE_libiwinfo-data
 	bool
 	default y
 
 config PACKAGE_bnx2-firmware
-	bool
-	default y
-
-config PACKAGE_r8169-firmware
 	bool
 	default y
 
@@ -6014,11 +6054,11 @@ config PACKAGE_kmod-fs-f2fs
 	bool
 	default y
 
-config PACKAGE_kmod-fs-vfat
+config PACKAGE_kmod-fs-ntfs3
 	bool
 	default y
 
-config PACKAGE_kmod-fuse
+config PACKAGE_kmod-fs-vfat
 	bool
 	default y
 
@@ -6082,7 +6122,15 @@ config PACKAGE_kmod-nls-utf8
 	bool
 	default y
 
+config PACKAGE_kmod-ip6tables
+	bool
+	default y
+
 config PACKAGE_kmod-ipt-conntrack
+	bool
+	default y
+
+config PACKAGE_kmod-ipt-conntrack-extra
 	bool
 	default y
 
@@ -6090,7 +6138,15 @@ config PACKAGE_kmod-ipt-core
 	bool
 	default y
 
+config PACKAGE_kmod-ipt-extra
+	bool
+	default y
+
 config PACKAGE_kmod-ipt-fullconenat
+	bool
+	default y
+
+config PACKAGE_kmod-ipt-iprange
 	bool
 	default y
 
@@ -6102,11 +6158,19 @@ config PACKAGE_kmod-ipt-nat
 	bool
 	default y
 
+config PACKAGE_kmod-ipt-nat6
+	bool
+	default y
+
 config PACKAGE_kmod-ipt-offload
 	bool
 	default y
 
 config PACKAGE_kmod-ipt-raw
+	bool
+	default y
+
+config PACKAGE_kmod-ipt-tproxy
 	bool
 	default y
 
@@ -6130,7 +6194,15 @@ config PACKAGE_kmod-nf-ipt
 	bool
 	default y
 
+config PACKAGE_kmod-nf-ipt6
+	bool
+	default y
+
 config PACKAGE_kmod-nf-nat
+	bool
+	default y
+
+config PACKAGE_kmod-nf-nat6
 	bool
 	default y
 
@@ -6143,6 +6215,10 @@ config PACKAGE_kmod-nf-nathelper-extra
 	default y
 
 config PACKAGE_kmod-nf-reject
+	bool
+	default y
+
+config PACKAGE_kmod-nf-reject6
 	bool
 	default y
 
@@ -6186,6 +6262,10 @@ config PACKAGE_kmod-igbvf
 	bool
 	default y
 
+config PACKAGE_kmod-igc
+	bool
+	default y
+
 config PACKAGE_kmod-ixgbe
 	bool
 	default y
@@ -6206,7 +6286,7 @@ config PACKAGE_kmod-pcnet32
 	bool
 	default y
 
-config PACKAGE_kmod-phy-realtek
+config PACKAGE_kmod-r8101
 	bool
 	default y
 
@@ -6214,7 +6294,11 @@ config PACKAGE_kmod-r8125
 	bool
 	default y
 
-config PACKAGE_kmod-r8169
+config PACKAGE_kmod-r8168
+	bool
+	default y
+
+config PACKAGE_kmod-tg3
 	bool
 	default y
 
@@ -6223,6 +6307,14 @@ config PACKAGE_kmod-tulip
 	default y
 
 config PACKAGE_kmod-vmxnet3
+	bool
+	default y
+
+config PACKAGE_kmod-iptunnel
+	bool
+	default y
+
+config PACKAGE_kmod-iptunnel4
 	bool
 	default y
 
@@ -6246,11 +6338,11 @@ config PACKAGE_kmod-pppox
 	bool
 	default y
 
-config PACKAGE_kmod-slhc
+config PACKAGE_kmod-sit
 	bool
 	default y
 
-config PACKAGE_kmod-tcp-bbr
+config PACKAGE_kmod-slhc
 	bool
 	default y
 
@@ -6338,7 +6430,7 @@ config PACKAGE_kmod-usb-net-rtl8150
 	bool
 	default y
 
-config PACKAGE_kmod-usb-net-rtl8152
+config PACKAGE_kmod-usb-net-rtl8152-vendor
 	bool
 	default y
 
@@ -6382,6 +6474,18 @@ config PACKAGE_luci-lib-fs
 	bool
 	default y
 
+config NODEJS_14
+	bool
+	default n
+
+config NODEJS_16
+	bool
+	default y
+
+config NODEJS_18
+	bool
+	default n
+
 config PYTHON3_BLUETOOTH_SUPPORT
 	bool
 	default n
@@ -6405,6 +6509,22 @@ config PACKAGE_libip6tc
 config PACKAGE_libxtables
 	bool
 	default y
+
+config PACKAGE_libmbedtls
+	bool
+	default y
+
+config LIBMBEDTLS_DEBUG_C
+	bool
+	default n
+
+config LIBMBEDTLS_HAVE_SSE2
+	bool
+	default y
+
+config LIBMBEDTLS_HKDF_C
+	bool
+	default n
 
 config PACKAGE_libopenssl
 	bool
@@ -6538,11 +6658,75 @@ config PACKAGE_libopenssl-conf
 	bool
 	default y
 
+config WOLFSSL_HAS_AES_CCM
+	bool
+	default y
+
+config WOLFSSL_HAS_CHACHA_POLY
+	bool
+	default y
+
+config WOLFSSL_HAS_DH
+	bool
+	default y
+
+config WOLFSSL_HAS_ARC4
+	bool
+	default y
+
+config WOLFSSL_HAS_CERTGEN
+	bool
+	default y
+
+config WOLFSSL_HAS_TLSV10
+	bool
+	default y
+
+config WOLFSSL_HAS_TLSV13
+	bool
+	default y
+
+config WOLFSSL_HAS_SESSION_TICKET
+	bool
+	default y
+
+config WOLFSSL_HAS_DTLS
+	bool
+	default n
+
+config WOLFSSL_HAS_OCSP
+	bool
+	default y
+
+config WOLFSSL_HAS_WPAS
+	bool
+	default y
+
+config WOLFSSL_HAS_ECC25519
+	bool
+	default y
+
+config WOLFSSL_HAS_ECC448
+	bool
+	default n
+
+config WOLFSSL_HAS_OPENVPN
+	bool
+	default y
+
+config WOLFSSL_ALT_NAMES
+	bool
+	default y
+
 config PACKAGE_alsa-ucm-conf
 	bool
 	default y
 
 config PACKAGE_alsa-lib
+	bool
+	default y
+
+config PACKAGE_boost
 	bool
 	default y
 
@@ -6558,6 +6742,70 @@ config boost-fiber-exclude
 	bool
 	default n
 
+config boost-compile-visibility-global
+	bool
+	default n
+
+config boost-compile-visibility-protected
+	bool
+	default n
+
+config boost-compile-visibility-hidden
+	bool
+	default y
+
+config boost-shared-libs
+	bool
+	default n
+
+config boost-static-libs
+	bool
+	default n
+
+config boost-static-and-shared-libs
+	bool
+	default y
+
+config boost-runtime-shared
+	bool
+	default y
+
+config boost-variant-release
+	bool
+	default y
+
+config boost-variant-debug
+	bool
+	default n
+
+config boost-variant-profile
+	bool
+	default n
+
+config boost-use-name-tags
+	bool
+	default n
+
+config boost-libs-all
+	bool
+	default n
+
+config boost-test-pkg
+	bool
+	default n
+
+config boost-graph-parallel
+	bool
+	default n
+
+config PACKAGE_boost-program_options
+	bool
+	default y
+
+config PACKAGE_boost-system
+	bool
+	default y
+
 config PACKAGE_libblkid
 	bool
 	default y
@@ -6566,7 +6814,155 @@ config PACKAGE_libblobmsg-json
 	bool
 	default y
 
+config PACKAGE_libbpf
+	bool
+	default y
+
+config PACKAGE_libcares
+	bool
+	default y
+
 config PACKAGE_libcomerr
+	bool
+	default y
+
+config PACKAGE_libcurl
+	bool
+	default y
+
+config LIBCURL_MBEDTLS
+	bool
+	default n
+
+config LIBCURL_WOLFSSL
+	bool
+	default n
+
+config LIBCURL_OPENSSL
+	bool
+	default y
+
+config LIBCURL_GNUTLS
+	bool
+	default n
+
+config LIBCURL_NOSSL
+	bool
+	default n
+
+config LIBCURL_DICT
+	bool
+	default n
+
+config LIBCURL_FILE
+	bool
+	default y
+
+config LIBCURL_FTP
+	bool
+	default y
+
+config LIBCURL_GOPHER
+	bool
+	default n
+
+config LIBCURL_HTTP
+	bool
+	default y
+
+config LIBCURL_COOKIES
+	bool
+	default y
+
+config LIBCURL_IMAP
+	bool
+	default n
+
+config LIBCURL_LDAP
+	bool
+	default n
+
+config LIBCURL_POP3
+	bool
+	default n
+
+config LIBCURL_RTSP
+	bool
+	default n
+
+config LIBCURL_SSH2
+	bool
+	default n
+
+config LIBCURL_SMB
+	bool
+	default n
+
+config LIBCURL_SMTP
+	bool
+	default n
+
+config LIBCURL_TELNET
+	bool
+	default n
+
+config LIBCURL_TFTP
+	bool
+	default y
+
+config LIBCURL_NGHTTP2
+	bool
+	default y
+
+config LIBCURL_PROXY
+	bool
+	default y
+
+config LIBCURL_CRYPTO_AUTH
+	bool
+	default y
+
+config LIBCURL_TLS_SRP
+	bool
+	default y
+
+config LIBCURL_LIBIDN2
+	bool
+	default n
+
+config LIBCURL_THREADED_RESOLVER
+	bool
+	default y
+
+config LIBCURL_ZLIB
+	bool
+	default n
+
+config LIBCURL_ZSTD
+	bool
+	default n
+
+config LIBCURL_UNIX_SOCKETS
+	bool
+	default y
+
+config LIBCURL_LIBCURL_OPTION
+	bool
+	default n
+
+config LIBCURL_VERBOSE
+	bool
+	default n
+
+config LIBCURL_NTLM
+	bool
+	default n
+
+config PACKAGE_libelf
+	bool
+	default y
+
+config PACKAGE_libev
 	bool
 	default y
 
@@ -6598,7 +6994,15 @@ config PACKAGE_libjson-c
 	bool
 	default y
 
+config PACKAGE_libltdl
+	bool
+	default y
+
 config PACKAGE_liblua
+	bool
+	default y
+
+config PACKAGE_liblua5.3
 	bool
 	default y
 
@@ -6634,7 +7038,19 @@ config PACKAGE_libnfnetlink
 	bool
 	default y
 
+config PACKAGE_libnghttp2
+	bool
+	default y
+
 config PACKAGE_libnl-tiny
+	bool
+	default y
+
+config PACKAGE_libpcre
+	bool
+	default y
+
+config PCRE_JIT_ENABLED
 	bool
 	default y
 
@@ -6647,6 +7063,14 @@ config PACKAGE_libsensors
 	default y
 
 config PACKAGE_libsmartcols
+	bool
+	default y
+
+config PACKAGE_libsodium
+	bool
+	default y
+
+config LIBSODIUM_MINIMAL
 	bool
 	default y
 
@@ -6670,7 +7094,15 @@ config PACKAGE_libuci
 	bool
 	default y
 
+config PACKAGE_libuci-lua
+	bool
+	default y
+
 config PACKAGE_libuclient
+	bool
+	default y
+
+config PACKAGE_libudns
 	bool
 	default y
 
@@ -6693,6 +7125,14 @@ config PACKAGE_rpcd-mod-rrdns
 config PACKAGE_terminfo
 	bool
 	default y
+
+config PACKAGE_zlib
+	bool
+	default y
+
+config ZLIB_OPTIMIZE_SPEED
+	bool
+	default n
 
 config PACKAGE_luci
 	bool
@@ -6870,10 +7310,6 @@ config PACKAGE_luci-mod-system
 	bool
 	default y
 
-config PACKAGE_luci-app-adguardhome_INCLUDE_binary
-	bool
-	default y
-
 config PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs
 	bool
 	default y
@@ -6890,19 +7326,27 @@ config PACKAGE_luci-app-firewall
 	bool
 	default y
 
+config PACKAGE_iptables-mod-tproxy
+	bool
+	default y
+
+config PACKAGE_iptables-mod-extra
+	bool
+	default y
+
 config PACKAGE_luci-app-opkg
 	bool
 	default y
 
-config PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG
+config PACKAGE_luci-app-passwall
+	bool
+	default y
+
+config PACKAGE_luci-app-passwall_Iptables_Transparent_Proxy
 	bool
 	default y
 
 config PACKAGE_luci-app-passwall_INCLUDE_Haproxy
-	bool
-	default y
-
-config PACKAGE_luci-app-passwall_INCLUDE_PDNSD
 	bool
 	default y
 
@@ -6938,6 +7382,22 @@ config PACKAGE_luci-app-passwall_INCLUDE_Xray
 	bool
 	default y
 
+config PACKAGE_luci-app-passwall2_INCLUDE_Shadowsocks_Libev_Client
+	bool
+	default y
+
+config PACKAGE_luci-app-passwall2_INCLUDE_ShadowsocksR_Libev_Client
+	bool
+	default y
+
+config PACKAGE_luci-app-passwall2_INCLUDE_Simple_Obfs
+	bool
+	default y
+
+config PACKAGE_luci-app-passwall2_INCLUDE_V2ray_Plugin
+	bool
+	default y
+
 config PACKAGE_luci-app-rclone_INCLUDE_rclone-webui
 	bool
 	default y
@@ -6954,15 +7414,19 @@ config PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server
 	bool
 	default y
 
-config PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client
-	bool
-	default y
-
-config PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_Obfs
-	bool
-	default y
-
 config PACKAGE_luci-app-ssr-plus_INCLUDE_Xray
+	bool
+	default y
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG
+	bool
+	default y
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Simple_Obfs
+	bool
+	default y
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client
 	bool
 	default y
 
@@ -6970,19 +7434,11 @@ config PACKAGE_luci-app-turboacc
 	bool
 	default y
 
-config PACKAGE_TURBOACC_INCLUDE_OFFLOADING
+config PACKAGE_TURBOACC_INCLUDE_FLOW_OFFLOADING
 	bool
 	default y
 
-config PACKAGE_TURBOACC_INCLUDE_BBR_CCA
-	bool
-	default y
-
-config UnblockNeteaseMusic_Go
-	bool
-	default y
-
-config UnblockNeteaseMusic_NodeJS
+config PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go
 	bool
 	default y
 
@@ -6999,6 +7455,10 @@ config PACKAGE_luci-app-vssr_INCLUDE_Xray
 	default y
 
 config PACKAGE_luci-app-vssr_INCLUDE_Xray_plugin
+	bool
+	default y
+
+config PACKAGE_luci-app-webd_INCLUDE_WEBD_BINARY
 	bool
 	default y
 
@@ -7062,6 +7522,10 @@ config PACKAGE_luci-i18n-opkg-zh-cn
 	bool
 	default y
 
+config PACKAGE_luci-i18n-passwall-zh-cn
+	bool
+	default y
+
 config PACKAGE_luci-i18n-turboacc-zh-cn
 	bool
 	default y
@@ -7106,77 +7570,21 @@ config POSTFIX_EAI
 	bool
 	default n
 
-config UNBLOCKNETEASEMUSIC_GO_COMPRESS_GOPROXY
+config PACKAGE_curl
 	bool
-	default n
+	default y
 
-config UNBLOCKNETEASEMUSIC_GO_COMPRESS_UPX
+config PACKAGE_wget-ssl
 	bool
-	default n
+	default y
 
-config ANNIE_COMPRESS_GOPROXY
+config PACKAGE_ip6tables
 	bool
-	default n
+	default y
 
-config ANNIE_COMPRESS_UPX
+config PACKAGE_ip6tables-mod-nat
 	bool
-	default n
-
-config SIMPLE_TORRENT_COMPRESS_GOPROXY
-	bool
-	default n
-
-config SIMPLE_TORRENT_COMPRESS_UPX
-	bool
-	default n
-
-config BITSRUNLOGIN_GO_COMPRESS_GOPROXY
-	bool
-	default n
-
-config BITSRUNLOGIN_GO_COMPRESS_UPX
-	bool
-	default n
-
-config CLOUDREVE_COMPRESS_GOPROXY
-	bool
-	default n
-
-config CLOUDREVE_COMPRESS_UPX
-	bool
-	default n
-
-config GO_ALIYUNDRIVE_WEBDAV_COMPRESS_GOPROXY
-	bool
-	default n
-
-config GO_ALIYUNDRIVE_WEBDAV_COMPRESS_UPX
-	bool
-	default n
-
-config GOWEBDAV_COMPRESS_GOPROXY
-	bool
-	default n
-
-config GOWEBDAV_COMPRESS_UPX
-	bool
-	default n
-
-config RCLONE_COMPRESS_GOPROXY
-	bool
-	default n
-
-config RCLONE_COMPRESS_UPX
-	bool
-	default n
-
-config WEBDAV_GO_COMPRESS_GOPROXY
-	bool
-	default n
-
-config WEBDAV_GO_COMPRESS_UPX
-	bool
-	default n
+	default y
 
 config PACKAGE_iptables
 	bool
@@ -7190,7 +7598,15 @@ config IPTABLES_NFTABLES
 	bool
 	default n
 
+config PACKAGE_iptables-mod-conntrack-extra
+	bool
+	default y
+
 config PACKAGE_iptables-mod-fullconenat
+	bool
+	default y
+
+config PACKAGE_iptables-mod-iprange
 	bool
 	default y
 
@@ -7198,29 +7614,13 @@ config IPTGEOIP_PRESERVE
 	bool
 	default n
 
-config DNSLOOKUP_COMPRESS_GOPROXY
+config PACKAGE_dns2socks
 	bool
-	default n
+	default y
 
-config DNSLOOKUP_COMPRESS_UPX
+config PACKAGE_dns2tcp
 	bool
-	default n
-
-config DNSPROXY_COMPRESS_GOPROXY
-	bool
-	default n
-
-config DNSPROXY_COMPRESS_UPX
-	bool
-	default n
-
-config MOSDNS_COMPRESS_GOPROXY
-	bool
-	default n
-
-config MOSDNS_COMPRESS_UPX
-	bool
-	default n
+	default y
 
 config PCAP_DNSPROXY_LIBPCAP
 	bool
@@ -7237,10 +7637,6 @@ config PCAP_DNSPROXY_TLS
 config PCAP_DNSPROXY_LISTENPORT
 	int
 	default 1053
-
-config PACKAGE_pdnsd-alt
-	bool
-	default y
 
 config OPENLDAP_DEBUG
 	bool
@@ -7266,11 +7662,15 @@ config AMULE_CRYPTOPP_STATIC_LINKING
 	bool
 	default n
 
-config BROOK_COMPRESS_GOPROXY
+config PACKAGE_ip-full
+	bool
+	default y
+
+config ALIST_COMPRESS_UPX
 	bool
 	default n
 
-config BROOK_COMPRESS_UPX
+config ALIST_COMPRESS_GOPROXY
 	bool
 	default n
 
@@ -7278,21 +7678,81 @@ config PACKAGE_cgi-io
 	bool
 	default y
 
-config GQ_CLIENT_COMPRESS_UPX
+config PACKAGE_haproxy
+	bool
+	default y
+
+config PACKAGE_microsocks
+	bool
+	default y
+
+config PACKAGE_shadowsocks-libev-config
+	bool
+	default y
+
+config PACKAGE_shadowsocks-libev-ss-local
+	bool
+	default y
+
+config PACKAGE_shadowsocks-libev-ss-redir
+	bool
+	default y
+
+config PACKAGE_shadowsocks-libev-ss-server
+	bool
+	default y
+
+config PACKAGE_shadowsocksr-libev-ssr-local
+	bool
+	default y
+
+config PACKAGE_shadowsocksr-libev-ssr-redir
+	bool
+	default y
+
+config SING_BOX_BUILD_ACME
 	bool
 	default n
 
-config GQ_SERVER_COMPRESS_UPX
+config SING_BOX_BUILD_CLASH_API
+	bool
+	default y
+
+config SING_BOX_BUILD_ECH
 	bool
 	default n
 
-config TROJAN_GO_COMPRESS_GOPROXY
+config SING_BOX_BUILD_GRPC
 	bool
 	default n
 
-config TROJAN_GO_COMPRESS_UPX
+config SING_BOX_BUILD_GVISOR
 	bool
 	default n
+
+config SING_BOX_BUILD_QUIC
+	bool
+	default y
+
+config SING_BOX_BUILD_SHADOWSOCKSR
+	bool
+	default n
+
+config SING_BOX_BUILD_UTLS
+	bool
+	default y
+
+config SING_BOX_BUILD_V2RAY_API
+	bool
+	default n
+
+config SING_BOX_BUILD_WIREGUARD
+	bool
+	default y
+
+config PACKAGE_trojan-plus
+	bool
+	default y
 
 config PACKAGE_uhttpd
 	bool
@@ -7302,29 +7762,9 @@ config PACKAGE_uhttpd-mod-ubus
 	bool
 	default y
 
-config V2RAY_PLUGIN_COMPRESS_GOPROXY
+config PACKAGE_v2ray-plugin
 	bool
-	default n
-
-config V2RAY_PLUGIN_COMPRESS_UPX
-	bool
-	default n
-
-config V2RAYA_COMPRESS_GOPROXY
-	bool
-	default n
-
-config V2RAYA_COMPRESS_UPX
-	bool
-	default n
-
-config XRAY_PLUGIN_COMPRESS_GOPROXY
-	bool
-	default n
-
-config XRAY_PLUGIN_COMPRESS_UPX
-	bool
-	default n
+	default y
 
 config WPA_WOLFSSL
 	bool
@@ -7350,33 +7790,13 @@ config WPA_ENABLE_WEP
 	bool
 	default n
 
-config ADGUARDHOME_COMPRESS_GOPROXY
+config WPA_MBO_SUPPORT
 	bool
 	default n
 
-config BAIDUPCS_WEB_COMPRESS_GOPROXY
+config PACKAGE_6in4
 	bool
-	default n
-
-config BAIDUPCS_WEB_COMPRESS_UPX
-	bool
-	default n
-
-config CDNSPEEDTEST_COMPRESS_GOPROXY
-	bool
-	default n
-
-config CDNSPEEDTEST_COMPRESS_UPX
-	bool
-	default n
-
-config CLOUDFLARED_COMPRESS_GOPROXY
-	bool
-	default n
-
-config CLOUDFLARED_COMPRESS_UPX
-	bool
-	default n
+	default y
 
 config PACKAGE_ethtool
 	bool
@@ -7386,37 +7806,33 @@ config ETHTOOL_PRETTY_DUMP
 	bool
 	default n
 
-config GO_NATS_COMPRESS_GOPROXY
+config PACKAGE_ipset
 	bool
-	default n
+	default y
 
-config GO_NATS_COMPRESS_UPX
+config PACKAGE_ipt2socks
 	bool
-	default n
+	default y
 
-config GOST_COMPRESS_GOPROXY
+config PACKAGE_libipset
 	bool
-	default n
+	default y
 
-config GOST_COMPRESS_UPX
+config PACKAGE_odhcp6c
 	bool
-	default n
+	default y
 
-config HYSTERIA_COMPRESS_GOPROXY
-	bool
-	default n
+config PACKAGE_odhcp6c_ext_cer_id
+	int
+	default 0
 
-config HYSTERIA_COMPRESS_UPX
+config PACKAGE_odhcpd-ipv6only
 	bool
-	default n
+	default y
 
-config NPC_COMPRESS_UPX
-	bool
-	default n
-
-config NPS_COMPRESS_UPX
-	bool
-	default n
+config PACKAGE_odhcpd_ipv6only_ext_cer_id
+	int
+	default 0
 
 config PACKAGE_ppp
 	bool
@@ -7426,19 +7842,31 @@ config PACKAGE_ppp-mod-pppoe
 	bool
 	default y
 
-config SPEEDTEST_GO_COMPRESS_GOPROXY
+config PACKAGE_simple-obfs-client
 	bool
-	default n
+	default y
 
-config SPEEDTEST_GO_COMPRESS_UPX
+config PACKAGE_tcping
 	bool
-	default n
+	default y
 
 config PACKAGE_uclient-fetch
 	bool
 	default y
 
+config PACKAGE_v2ray-core
+	bool
+	default y
+
+config PACKAGE_xray-core
+	bool
+	default y
+
 config PACKAGE_alsa-utils
+	bool
+	default y
+
+config PACKAGE_unzip
 	bool
 	default y
 
@@ -7458,11 +7886,7 @@ config PACKAGE_mkf2fs
 	bool
 	default y
 
-config PACKAGE_ntfs-3g
-	bool
-	default y
-
-config PACKAGE_NTFS-3G_HAS_PROBE
+config PACKAGE_ntfs3-mount
 	bool
 	default y
 
@@ -7470,17 +7894,17 @@ config PACKAGE_sysfsutils
 	bool
 	default y
 
-config PACKAGE_bc
+config PACKAGE_coreutils
 	bool
 	default y
 
-config FILEBROWSER_COMPRESS_GOPROXY
+config PACKAGE_coreutils-base64
 	bool
-	default n
+	default y
 
-config FILEBROWSER_COMPRESS_UPX
+config PACKAGE_coreutils-nohup
 	bool
-	default n
+	default y
 
 config PACKAGE_jshn
 	bool
@@ -7510,19 +7934,7 @@ config STRACE_LIBUNWIND
 	bool
 	default n
 
-config SYNCTHING_COMPRESS_GOPROXY
-	bool
-	default n
-
-config SYNCTHING_COMPRESS_UPX
-	bool
-	default n
-
-config YQ_COMPRESS_GOPROXY
-	bool
-	default n
-
-config YQ_COMPRESS_UPX
+config NO_PORTAL
 	bool
 	default n
 

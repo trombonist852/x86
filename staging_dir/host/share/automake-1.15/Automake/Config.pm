@@ -32,7 +32,7 @@ our $PACKAGE = 'automake';
 our $PACKAGE_BUGREPORT = 'bug-automake@gnu.org';
 our $VERSION = '1.15.1';
 our $RELEASE_YEAR = '2017';
-our $libdir = $ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/automake-1.15' : '/home/wangjun/21/staging_dir/host/share/automake-1.15';
+our $libdir = $ENV{'STAGING_DIR'} ? $ENV{'STAGING_DIR'} . '/../host/share/automake-1.15' : '/home/trb/sdk/imm/staging_dir/host/share/automake-1.15';
 
 our $perl_threads = 0;
 # We need at least this version for CLONE support.

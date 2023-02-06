@@ -29,7 +29,7 @@ periodic_e2scrub=0
 scrub_all=0
 snap_size_mb=256
 reap=0
-conffile="/home/wangjun/21/staging_dir/host/etc/e2scrub.conf"
+conffile="/home/trb/sdk/imm/staging_dir/host/etc/e2scrub.conf"
 
 test -f "${conffile}" && . "${conffile}"
 
@@ -179,7 +179,7 @@ for tgt in "${targets[@]}"; do
 	fi
 
 	# Otherwise use direct invocation
-	${DBG} "/home/wangjun/21/staging_dir/host/bin/e2scrub" ${scrub_args} "${tgt}"
+	${DBG} "/home/trb/sdk/imm/staging_dir/host/bin/e2scrub" ${scrub_args} "${tgt}"
 done
 
 exitcode 0

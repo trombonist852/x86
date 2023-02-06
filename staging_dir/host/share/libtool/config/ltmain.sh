@@ -147,10 +147,10 @@ if test -n "$STAGING_DIR"; then
 	: ${GREP="$STAGING_DIR/../host/bin/grep"}
 	: ${SED="$STAGING_DIR/../host/bin/sed"}
 else
-	: ${EGREP="/home/wangjun/21/staging_dir/host/bin/grep -E"}
-	: ${FGREP="/home/wangjun/21/staging_dir/host/bin/grep -F"}
-	: ${GREP="/home/wangjun/21/staging_dir/host/bin/grep"}
-	: ${SED="/home/wangjun/21/staging_dir/host/bin/sed"}
+	: ${EGREP="/home/trb/sdk/imm/staging_dir/host/bin/grep -E"}
+	: ${FGREP="/home/trb/sdk/imm/staging_dir/host/bin/grep -F"}
+	: ${GREP="/home/trb/sdk/imm/staging_dir/host/bin/grep"}
+	: ${SED="/home/trb/sdk/imm/staging_dir/host/bin/sed"}
 fi
 : ${SHELL="${CONFIG_SHELL-/bin/sh}"}
 : ${Xsed="$SED -e 1s/^X//"}

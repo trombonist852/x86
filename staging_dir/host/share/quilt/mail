@@ -73,7 +73,7 @@ first, and a last patch name of \`-' denotes the last patch in the series.
 
 --reply-to message
 	Add the appropriate headers to reply to the specified message.
-" "/home/wangjun/21/staging_dir/host/share/doc/quilt/README.MAIL"
+" "/home/trb/sdk/imm/staging_dir/host/share/doc/quilt/README.MAIL"
 		exit 0
 	else
 		exit 1
